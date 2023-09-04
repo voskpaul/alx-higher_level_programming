@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""
+"""This module defines a Rectangle class."""
 
-This module is composed by a function that adds two numbers
 
-"""
 class Rectangle:
-    """ Empty class """
+    """Defines an empty Rectangle class."""
     pass
