@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-
-This is a module that containts a clas that avoids
-dynmaically created attributes
-
-"""
+"""This module defines a LockedClass."""
 
 
 class LockedClass:
-    __slots__ = ['first_name']
+    """Defines a class that restricts the creation of instance attributes."""
 
-    def __init__(self):
-        """ Init method """
-        pass
+    def __setattr__(self, name, value):
+        """Customized attribute assignment behavior."""
+        if name == 'first_name':
+            self.__dict__[name] = value
+        else:
+            raise AttributeError(f"'LockedClass' object has no attribute '{name}'")
 
