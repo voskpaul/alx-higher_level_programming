@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""This module defines a LockedClass."""
+# 101-locked_class.py
+"""Defines a locked class."""
 
 
 class LockedClass:
-    """Defines a class that restricts the creation of instance attributes."""
+    """
+    Prevent the user from instantiating new LockedClass attributes
+    for anything but attributes called 'first_name'.
+    """
 
-    def __setattr__(self, name, value):
-        """Customized attribute assignment behavior."""
-        if name == 'first_name':
-            self.__dict__[name] = value
-        else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))
-
+    __slots__ = ["first_name"]
