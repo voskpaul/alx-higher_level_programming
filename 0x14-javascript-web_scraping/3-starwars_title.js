@@ -18,4 +18,3 @@ request(url, function (error, response, body) {
   // The title must be displayed in the Star wars film
   console.log(JSON.parse(body).title);
 });
-

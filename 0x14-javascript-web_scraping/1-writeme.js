@@ -12,4 +12,3 @@ fs.writeFile(filePath, stringToWrite, 'utf-8', (err, data) => {
     console.log(err);
   }
 });
-
